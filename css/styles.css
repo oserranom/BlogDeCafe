@@ -37,6 +37,7 @@ a{
 
 h1, h2, h3, h4{
     font-family: var(--fuenteHeading);
+    line-height: 1.3;
 }
 
 h1{
@@ -138,4 +139,59 @@ img{
 .entrada{
     border-bottom: 1px solid var(--grisClaro); /* Se añade borde a la parte inferior, el orden siempre igual*/
     margin-bottom: 2rem; /*Se requiere separar las entradas para que se vea el borde anterior*/ 
+}
+
+.entrada:last-of-type{ /*De esta manera se selecciona el último elemento del tipo entrada*/
+    border: none; /*En la última entrada no queremos borde*/
+}
+
+.boton{
+    display: block; /*Block coge todo el ancho*/
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+@media(min-width: 768px){
+    .boton{
+        display: inline-block; /*Inline-block consigue alinearlo a la izquierda conservando padding y margins*/
+    }
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+
+/*Sidebar*/
+
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+.cursos{
+    list-style: none; /* Quita los puntitos de las listas ul*/
+}
+
+.widget-curso{
+    border-bottom: 1px solid var(--grisClaro);
+    margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type{
+    border: none;
+    margin-bottom: none;
+}
+
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: 700;
+}
+
+.widget-curso__info{
+    font-weight: normal;
 }
