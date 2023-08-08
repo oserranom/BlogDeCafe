@@ -5,6 +5,7 @@
     --primario: #784D3C;
     --blanco: white;
     --negro: black;
+    --grisClaro: rgba(215, 214, 214, 0.699);
 }
 
 html{
@@ -72,6 +73,7 @@ img{
 /*HEADER*/
 
 .header{
+    /*Ejemplo de imagen de fondo superior a modo de presentación*/
     background-image: url(../img/banner.jpg);
     height: 60rem; /*Primero se elige un tamaño para que aparezca la imagen en si*/
     background-size: cover; /*Cubre todo el fondo con la imagen*/
@@ -84,4 +86,56 @@ img{
     text-align: center;
     color: var(--blanco);
     margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .header__texto{
+        margin-top: 15rem;
+    }
+    .barra{
+        display: flex;
+        justify-content: space-between; /*Space between manda cada elemento hacia un extremo*/
+        align-items: center; /*Para centrar verticalmente*/
+    }
+}
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+
+.logo__bold{
+    font-weight: 900;
+}
+
+@media (min-width: 768px) {
+    .navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+/*Contenido principal*/
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 1px solid var(--grisClaro); /* Se añade borde a la parte inferior, el orden siempre igual*/
+    margin-bottom: 2rem; /*Se requiere separar las entradas para que se vea el borde anterior*/ 
 }
