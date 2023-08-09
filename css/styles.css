@@ -89,6 +89,10 @@ img{
     margin-top: 5rem;
 }
 
+.barra{
+    padding-top: 3rem;
+}
+
 @media (min-width: 768px) {
     .header__texto{
         margin-top: 15rem;
@@ -195,3 +199,45 @@ img{
 .widget-curso__info{
     font-weight: normal;
 }
+
+/*Footer*/
+
+.footer{
+    background-color: var(--negro);
+    padding-bottom: 3rem;
+    margin-top: 4rem;
+}
+
+/*Nosotros*/
+
+@media(min-width: 768px){
+    .sobre-nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .sobre-nosotros__imagen{
+        margin-top: 2.5rem;
+    }
+}
+
+/*Cursos*/
+
+.curso{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--grisClaro);
+}
+
+.curso:last-of-type{
+    border-bottom: none;
+}
+
+@media(min-width: 768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+}
+
