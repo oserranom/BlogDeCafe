@@ -76,7 +76,7 @@ img{
 .header{
     /*Ejemplo de imagen de fondo superior a modo de presentación*/
     background-image: url(../img/banner.jpg);
-    height: 60rem; /*Primero se elige un tamaño para que aparezca la imagen en si*/
+    height: 60rem; /*Primero se elige una altura para que aparezca la imagen en si*/
     background-size: cover; /*Cubre todo el fondo con la imagen*/
     background-repeat: no-repeat; /*No repite la imagen a lo ancho de la web*/
     background-position: center center;  /*Al cambiar tamaño de pantalla hace que se muestre 
@@ -161,6 +161,10 @@ img{
     margin-bottom: 2rem;
 }
 
+.boton:hover{
+    cursor: pointer;
+}
+
 @media(min-width: 768px){
     .boton{
         display: inline-block; /*Inline-block consigue alinearlo a la izquierda conservando padding y margins*/
@@ -241,3 +245,41 @@ img{
     }
 }
 
+/*Contacto*/
+
+.contacto-bg{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.formulario{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+
+}
+.campo{
+    display: flex; /*Habilita flex en las clases hijas*/
+    margin-bottom: 2rem;
+    gap: 2rem;
+
+}
+.campo__label{
+    flex: 0 0 9rem; /*Factor de crecimiento 00 y tamaño fijo de 9 rem para cada label*/
+    text-align: right;
+
+}
+.campo__field{
+    flex: 1; /* Factor de crecimiento 1 para los fields hará que abarque todo el espacio restante relación 0:1*/
+    border: 1px solid var(--grisClaro); 
+
+}
+
+.campo__field--textarea{
+    height: 15rem; 
+
+}
