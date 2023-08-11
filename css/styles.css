@@ -8,6 +8,8 @@
     --grisClaro: rgba(215, 214, 214, 0.699);
 }
 
+/*Box Sizing*/
+
 html{
     box-sizing: border-box;
     font-size: 62.5%;
